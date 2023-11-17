@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- temperature screen -->
+      <div class="temp-box">
+        <div class="temp sec-1"></div>
+        <div class="temp sec-2">
+          <div>
+            <h1 id="place"></h1>
+          </div>
+          <div>
+            <p id="time"></p>
+          </div>
+        </div>
+        <div class="temp sec-3">
+          <div>
+            <img id="icn" />
+          </div>
+          <div id="cloud">
+            <p id="cndt"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- search column -->
+      <div class="search-box">
+        <form>
+          <input
+            class="search-bar"
+            type="text"
+            placeholder="Search for Location"
+          />
+          <button class="search-btn">Search</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

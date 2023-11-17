@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <span class="counter">0</span>
+    <div>
+      increment/decrement <input class="factor" type="number" value="0" />
+    </div>
+    <div>
+      <button class="plus">+</button>
+      <button class="minus">-</button><br />
+      <button class="reset">reset</button>
+    </div>
+    <script>
+      let factor = document.querySelector(".factor");
+      let plus = document.querySelector(".plus");
+      let minus = document.querySelector(".minus");
+      let reset = document.querySelector(".reset");
+      let counter = document.querySelector(".counter");
+
+      plus.addEventListener("click", () => {
+        counter.innerText = `${
+          parseInt(factor.value) + parseInt(counter.innerText)
+        }`;
+      });
+
+      minus.addEventListener("click", () => {
+        parseInt(counter.innerText) > 0
+          ? (counter.innerText = `${
+              parseInt(counter.innerText) - parseInt(factor.value)
+            }`)
+          : 0;
+      });
+      reset.addEventListener("click", () => {
+        counter.innerText = "0";
+      });
+    </script>
+  </body>
+</html>
